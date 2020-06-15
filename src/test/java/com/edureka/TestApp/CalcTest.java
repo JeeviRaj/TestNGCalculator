@@ -40,7 +40,7 @@ public class CalcTest
 	    
 	    FirefoxOptions options = new FirefoxOptions();
         
-        options.addArguments("--headless");
+       // options.addArguments("--headless");
 	    options.setCapability("requireWindowFocus", true);
         //String mygecko=System.getenv("HOME") + "/Downloads/geckodriver";
         String mygecko= prop.getProperty("webdriver_path") + "geckodriver";
@@ -62,7 +62,7 @@ public class CalcTest
 
         String bodyText = driver.findElement(By.xpath("/html/body")).getText();
         System.out.println(bodyText);
-	    driver.findElement(By.id("f1")).sendKeys("12");
+	    driver.findElement(By.id("f1")).sendKeys("50");
 	    driver.findElement(By.xpath("/html/body/form/input[2]")).sendKeys("38");
         
 	    driver.findElement(By.name("r1")).click();
@@ -80,7 +80,7 @@ public class CalcTest
 	    
 	    Assert.assertTrue(bodyText.contains(text), text + " not found!" );
 	    
-	    Assert.assertTrue(bodyText.contains("50"), "50 not found!" );
+	    Assert.assertTrue(bodyText.contains("12"), "12 not found!" );
 	    
 	    Thread.sleep(5000);
 	    
