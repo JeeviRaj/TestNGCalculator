@@ -34,7 +34,7 @@ public class SubChromeTest {
 	    System.setProperty("webdriver.chrome.verboseLogging", "true");
 		System.out.println("System.setProperty!!");
 		ChromeOptions chromeOptions = new ChromeOptions(); 
-//		chromeOptions.addArguments("headless"); 
+		chromeOptions.addArguments("headless"); 
 		chromeOptions.addArguments("--no-sandbox");
 	    driver = new ChromeDriver(chromeOptions); 
 		System.out.println("driver!!");
