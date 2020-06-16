@@ -65,7 +65,7 @@ public class CalcTest
 	    driver.findElement(By.id("f1")).sendKeys("50");
 	    driver.findElement(By.xpath("/html/body/form/input[2]")).sendKeys("38");
         
-	    driver.findElement(By.name("r1")).click();
+	    driver.findElement(By.name("r2")).click();
 	    
 	    WebDriverWait wait = new WebDriverWait(driver, 10);
 	    WebElement myElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("s1")));
